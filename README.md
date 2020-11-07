@@ -7,8 +7,6 @@ Mongodb es para crear bds no sql
 - cd D:\Program Files\MongoDB\Server\3.2\bin
 - mongod --storageEngine=mmapv1 --dbpath C:\data\db
 
-
-
 #npm express para node-modules
 # Nodemon para que cada que guarde un archivo .js se reinicie el server (devDependencies - para dependencias de desarrollo)
 # Morgan para mostrar lo que hace el server
@@ -23,4 +21,8 @@ Mongodb es para crear bds no sql
     "tel": "222255",
     "email": "jiberlv@gmail.com"
 }
+
+# Para generar componentes dentro frontend/src/app/components
+# para generar clases ng g class employee
+# para generar servicios ng g s employee
 
