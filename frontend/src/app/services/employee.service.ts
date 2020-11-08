@@ -13,13 +13,17 @@ export class EmployeeService {
 
   constructor(private http: HttpClient) {
     this.selectedEmployee = new Employee();
+    
   }
+
+
 
   postEmployee(employee: Employee) {
     return this.http.post(this.URL_API, employee);
   }
 
   getEmployees() {
+    //console.log("ASDF",this.http.get<Employee[]>(this.URL_API));
     return this.http.get<Employee[]>(this.URL_API);
   }
 

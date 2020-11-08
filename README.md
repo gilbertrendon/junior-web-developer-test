@@ -14,7 +14,7 @@ Mongodb es para crear bds no sql
 # para las inserciones:
 {
     "id": 1,
-    "name": "primeroempleado"
+    "name": "primeroempleado",
     "tcontrat": "prestación de servicios",
     "dateb": "1/1/1992",
     "address": "carr 1 # 11-21",

@@ -11,19 +11,26 @@ import { Employee } from "../../models/employee";
   providers: [EmployeeService],
 })
 export class EmployeeComponent implements OnInit {
-  constructor(private employeeService: EmployeeService) {}
+  //constructor() {};
+
+  constructor(public employeeService: EmployeeService) {}
 
   ngOnInit() {
     this.getEmployees();
   }
 
   addEmployee(form?: NgForm) {
-    if (form.value._id) {
-      this.employeeService.putEmployee(form.value).subscribe((res) => {
+
+    if (form.value.id || form.value._id) {
+      //console.log(" if",form.value);
+
+      this.employeeService.putEmployee(form.value).subscribe((_res) => {
         this.resetForm(form);
         this.getEmployees();
       });
     } else {
+      //console.log(" else",form.value);
+
       this.employeeService.postEmployee(form.value).subscribe((res) => {
         this.getEmployees();
         this.resetForm(form);
@@ -32,7 +39,9 @@ export class EmployeeComponent implements OnInit {
   }
 
   getEmployees() {
+    //console.log("asdfasdf");
     this.employeeService.getEmployees().subscribe((res) => {
+     
       this.employeeService.employees = res;
     });
   }
