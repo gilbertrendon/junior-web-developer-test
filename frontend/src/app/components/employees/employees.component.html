@@ -43,6 +43,13 @@
               <input type="text" name="email" #name="ngModel" [(ngModel)]="employeeService.selectedEmployee.email"
                 placeholder="Enter your email" class="form-control">
             </div>
+
+            <div class="form-group">
+              <select  name="contract" #name="ngModel" [(ngModel)]="employeeService.selectedEmployee.contract"
+                placeholder="Enter your contract" class="form-control">
+                <option *ngFor="let contract of employeeService.contracts" [value]="contract._id">{{contract.name}}</option>
+              </select>
+            </div>
   
             <button class="btn btn-primary mr-2" (click)="resetForm(employeeForm)">Clean</button>
             <button class="btn btn-secondary">Save</button>

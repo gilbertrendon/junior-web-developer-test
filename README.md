@@ -20,7 +20,8 @@ Mongodb es para crear bds no sql
     "dateb": "1/1/1992",
     "address": "carr 1 # 11-21",
     "tel": "222255",
-    "email": "jiberlv@gmail.com"
+    "email": "jiberlv@gmail.com",
+    "contract": "5fa95b34fd657216bc475597"
 }
 
 # Para generar componentes dentro frontend/src/app/components

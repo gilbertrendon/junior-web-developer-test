@@ -1,5 +1,6 @@
 export class Employee {
-    constructor(_id = "", id = 1, name = "", tcontrat="", dateb = "", address = "", tel = "") {
+    constructor(_id = "", id = 1, name = "", tcontrat="", dateb = "", address = "", tel = "",
+    contract = "") {
       this._id = _id;
       this.id = id;
       this.name = name;
@@ -7,6 +8,7 @@ export class Employee {
       this.dateb = dateb;
       this.address = address;
       this.tel = tel;
+      this.contract = contract;
     }
   
     _id: string;
@@ -17,4 +19,5 @@ export class Employee {
     address: string;
     tel: string;
     email: string;
+    contract: string;
   }

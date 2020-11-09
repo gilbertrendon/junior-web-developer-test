@@ -24,7 +24,8 @@ employeeCtrl.createEmployee = async (req, res, next) => {
     dateb: req.body.dateb,
     address: req.body.address,
     tel: req.body.tel,
-    email: req.body.email
+    email: req.body.email,
+    contract: req.body.contract
 
 
     

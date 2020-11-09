@@ -8,7 +8,44 @@
 <div class="container p-4">
   <app-employee></app-employee>
 </div>
-
+<nav class="navbar navbar-dark bg-dark">
+  <div class="container">
+    <a class="navbar-brand" href="#">MEAN Contracts</a>
+  </div>
+</nav>
 <div class="container p-4">
   <app-contract></app-contract>
 </div>
+<nav class="navbar navbar-dark bg-dark">
+  <div class="container">
+    <a class="navbar-brand" href="#">Contracts and Employees</a>
+  </div>
+</nav>
+<div class="row">
+  <div class="col-md-12">
+    <table class="table table-striped">
+      <thead>
+        <th>id</th>
+        <th>name</th>
+        <th>tcontrat</th>
+        <th>date born</th>
+        <th>address</th>
+        <th>tel</th>
+        <th>email</th>
+      </thead>
+      <tbody>
+        <tr *ngFor="let employee of empcont">
+          <td>{{ employee.id }}</td>
+          <td>{{ employee.name }}</td>
+          <td>{{ employee.tcontrat }}</td>
+          <td>{{ employee.dateb }}</td>
+          <td>{{ employee.address }}</td>
+          <td>{{ employee.tel }}</td>
+          <td>{{ employee.email }}</td>
+         
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+  
