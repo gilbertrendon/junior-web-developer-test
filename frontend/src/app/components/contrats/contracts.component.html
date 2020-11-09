@@ -1,0 +1,107 @@
+<div class="row">
+
+    <div class="col-md-4">
+      <div class="card">
+        <div class="card-body p-4">
+         
+        <form #contractForm="ngForm" (ngSubmit)="addContract(contractForm)">             
+             <input type="hidden" name="_id" #_id="ngModel" [(ngModel)]="contractService.selectedContract._id">
+           
+            <div class="form-group">
+              <input type="text" name="id" #name="ngModel" [(ngModel)]="contractService.selectedContract.id"
+                placeholder="Enter your id" class="form-control">
+            </div>
+            
+            <div class="form-group">
+              <input type="text" name="name" #name="ngModel" [(ngModel)]="contractService.selectedContract.name"
+                placeholder="Enter your FullName" class="form-control">
+            </div>
+
+            <div class="form-group">
+              <input type="datetime" name="dateb" #name="ngModel" [(ngModel)]="contractService.selectedContract.dateb"
+                placeholder="Enter your dateb" class="form-control">
+            </div>
+             
+            
+            <div class="form-group">
+              <input type="text" name="address" #name="ngModel" [(ngModel)]="contractService.selectedContract.address"
+                placeholder="Enter your address" class="form-control">
+            </div>
+
+            <div class="form-group">
+              <input type="text" name="tel" #name="ngModel" [(ngModel)]="contractService.selectedContract.tel"
+                placeholder="Enter your tel" class="form-control">
+            </div>
+
+            <div class="form-group">
+              <input type="text" name="email" #name="ngModel" [(ngModel)]="contractService.selectedContract.email"
+                placeholder="Enter your email" class="form-control">
+            </div>
+            
+            <div class="form-group">
+              <input type="text" name="enterprise" #name="ngModel" [(ngModel)]="contractService.selectedContract.enterprise"
+                placeholder="Enter your enterprise" class="form-control">
+            </div>
+
+            <div class="form-group">
+              <input type="text" name="nob" #name="ngModel" [(ngModel)]="contractService.selectedContract.nob"
+                placeholder="Enter your nob" class="form-control">
+            </div>
+            
+            <div class="form-group">
+              <input type="text" name="hourob" #name="ngModel" [(ngModel)]="contractService.selectedContract.hourob"
+                placeholder="Enter your hours ob" class="form-control">
+            </div>
+
+            <div class="form-group">
+              <input type="text" name="dayinit" #name="ngModel" [(ngModel)]="contractService.selectedContract.dayinit"
+                placeholder="Enter your day init" class="form-control">
+            </div>
+  
+            <button class="btn btn-primary mr-2" (click)="resetForm(contractForm)">Clean</button>
+            <button class="btn btn-secondary">Save</button>
+        </form>
+      </div>
+    </div>
+  </div>
+  
+  <div class="col-md-8">
+    <table class="table table-striped">
+      <thead>
+        <th>id</th>
+        <th>name</th>
+        <th>date born</th>
+        <th>address</th>
+        <th>tel</th>
+        <th>email</th>
+        <th>enterprise</th>
+        <th>nob</th>
+        <th>hourob</th>
+        <th>dayinit</th>
+      </thead>
+      <tbody>
+        <tr *ngFor="let contrat of contractService.contracts">
+          <td>{{ contrat.id }}</td>
+          <td>{{ contrat.name }}</td>
+          <td>{{ contrat.dateb }}</td>
+          <td>{{ contrat.address }}</td>
+          <td>{{ contrat.tel }}</td>
+          <td>{{ contrat.email }}</td>
+          <td>{{ contrat.enterprise }}</td>
+          <td>{{ contrat.nob }}</td>
+          <td>{{ contrat.hourob }}</td>
+          <td>{{ contrat.dayinit }}</td>
+          <td>
+            <a (click)="editContract(contrat)" class="btn btn-secondary btn-sm">
+              <i class="material-icons">edit</i>
+            </a>
+            <a (click)="deleteContract(contrat._id, contratForm)" class="btn btn-danger btn-sm">
+              <i class="material-icons">delete</i>
+            </a>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  </div>
+  

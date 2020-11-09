@@ -16,7 +16,7 @@ export class EmployeeComponent implements OnInit {
   constructor(public employeeService: EmployeeService) {}
 
   ngOnInit() {
-    this.getEmployees();
+    this.getEmployee();
   }
 
   addEmployee(form?: NgForm) {
@@ -26,19 +26,19 @@ export class EmployeeComponent implements OnInit {
 
       this.employeeService.putEmployee(form.value).subscribe((_res) => {
         this.resetForm(form);
-        this.getEmployees();
+        this.getEmployee();
       });
     } else {
       //console.log(" else",form.value);
 
       this.employeeService.postEmployee(form.value).subscribe((res) => {
-        this.getEmployees();
+        this.getEmployee();
         this.resetForm(form);
       });
     }
   }
 
-  getEmployees() {
+  getEmployee() {
     //console.log("asdfasdf");
     this.employeeService.getEmployees().subscribe((res) => {
      
@@ -53,7 +53,7 @@ export class EmployeeComponent implements OnInit {
   deleteEmployee(_id: string, form: NgForm) {
     if (confirm("Are you sure you want to delete it?")) {
       this.employeeService.deleteEmployee(_id).subscribe((res) => {
-        this.getEmployees();
+        this.getEmployee();
         this.resetForm(form);
       });
     }

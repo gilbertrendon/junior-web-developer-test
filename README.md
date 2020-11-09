@@ -1,4 +1,5 @@
 # junior-web-developer-test
+# Para la prueba se usó angular
 # Guia de la prueba https://github.com/evogit/junior-web-developer-test
 # Tutorial para ayuda: https://www.youtube.com/watch?v=khCIunNAEHI&ab_channel=Fazt
 # Para mongodb:Para ejecutar el mongo:
