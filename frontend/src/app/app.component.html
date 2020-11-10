@@ -25,24 +25,19 @@
   <div class="col-md-12">
     <table class="table table-striped">
       <thead>
-        <th>id</th>
-        <th>name</th>
-        <th>tcontrat</th>
-        <th>date born</th>
-        <th>address</th>
-        <th>tel</th>
-        <th>email</th>
+        <th>Contratist name</th>
+        <th>Employeee name</th>
+        <th>Work´s hours</th>
+        <th>Work´s name</th>
+        <th>Remaining hours</th>
       </thead>
       <tbody>
-        <tr *ngFor="let employee of empcont">
-          <td>{{ employee.id }}</td>
+        <tr *ngFor="let employee of employees">
+          <td>{{ employee.contratist }}</td>
           <td>{{ employee.name }}</td>
-          <td>{{ employee.tcontrat }}</td>
+          <td>{{ employee.whours }}</td>
           <td>{{ employee.dateb }}</td>
-          <td>{{ employee.address }}</td>
-          <td>{{ employee.tel }}</td>
-          <td>{{ employee.email }}</td>
-         
+          <td>{{ employee.address }}</td>  
         </tr>
       </tbody>
     </table>

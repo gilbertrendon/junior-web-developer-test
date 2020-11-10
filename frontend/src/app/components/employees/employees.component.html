@@ -47,7 +47,7 @@
             <div class="form-group">
               <select  name="contract" #name="ngModel" [(ngModel)]="employeeService.selectedEmployee.contract"
                 placeholder="Enter your contract" class="form-control">
-                <option *ngFor="let contract of employeeService.contracts" [value]="contract._id">{{contract.name}}</option>
+                <option *ngFor="let contract of employeeService.contracts" [value]="contract.name">{{contract.name}}</option>
               </select>
             </div>
   

@@ -14,7 +14,7 @@ const contractSchema = new Schema(
         enterprise: {type: String, required:true},
         nob: {type: String, required:true},//Obra asociada al contratista
         hourob: {type: String, required: true },//Horas para cada empleados de la obra de este contratista
-        dayinit: {type: Number, required: true }//Día inicio obra para los N empleados asociados
+        dayinit: {type: String, required: true }//Día inicio obra para los N empleados asociados
                 
         
             

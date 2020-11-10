@@ -28,3 +28,4 @@ Mongodb es para crear bds no sql
 # para generar clases ng g class employee
 # para generar servicios ng g s employee
 
+#ng test para las pruebas
